@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inbox</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+:root{--bg:#0f1220;--card:#1b2036;--hi:#4f7cff;--fg:#e8ebf7;--line:#333a5c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px system-ui,sans-serif}
+header{padding:28px 16px 12px;text-align:center}h1{margin:0 0 12px}
+.bar{display:flex;gap:10px;justify-content:center;flex-wrap:nowrap;max-width:720px;margin:0 auto}
+#q{flex:1 1 auto;min-width:0;max-width:480px;width:auto;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:16px}
+#logBtn,#mainBtn{padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:16px;cursor:pointer;flex:none;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+#logBtn:hover,#mainBtn:hover{background:var(--hi)}
+#logBtn .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff5a5f;margin-left:8px}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;padding:16px;max-width:1200px;margin:auto}
+.card{display:flex;align-items:center;justify-content:center;text-align:center;min-height:70px;padding:12px;background:var(--card);border-radius:12px;color:var(--fg);text-decoration:none;font-weight:600}
+.card:hover{background:var(--hi)}.count{opacity:.6;font-size:14px}
+footer{text-align:center;padding:8px 16px 32px;opacity:.75;font-size:14px}footer a{color:var(--fg)}
+dialog{width:min(560px,calc(100% - 32px));max-height:80vh;overflow:auto;padding:0;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--fg)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+.dh{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:var(--card);border-bottom:1px solid var(--line)}
+.dh h2{margin:0;font-size:20px}.dh button{background:none;border:0;color:var(--fg);font-size:26px;line-height:1;cursor:pointer}
+.db{padding:8px 20px 20px}.db h3{margin:18px 0 6px;color:var(--hi);font-size:15px;letter-spacing:.03em}
+.db ul{margin:0;padding-left:20px}.db li{margin:5px 0}
+</style></head><body>
+<header><h1>GN.SP Games</h1>
+<div class="bar"><a id="mainBtn" href="https://gme-io.github.io/gn.ss/">&larr; Main</a><input id="q" type="search" placeholder="Search 2989 games..." autofocus><button id="logBtn" type="button">Changelog<span class="dot" id="dot" hidden></span></button></div>
+<p class="count" id="n"></p></header>
+<main id="g">
+<a class="card" href="games/ages-of-conflict.html">Ages Of Conflict</a>
+<a class="card" href="games/angry-birds-showdown.html">Angry Birds Showdown</a>
+<a class="card" href="games/angry-birds-space.html">Angry Birds Space</a>
+<a class="card" href="games/awesome-tanks-2.html">Awesome Tanks 2</a>
+<a class="card" href="games/bob-the-robber.html">Bob The Robber</a>
+<a class="card" href="games/bow-masters.html">Bow Masters</a>
+<a class="card" href="games/car-drawing.html">Car Drawing</a>
+<a class="card" href="games/cluster-rush.html">Cluster Rush</a>
+<a class="card" href="games/crazy-cars.html">Crazy Cars</a>
+<a class="card" href="games/crazy-motorcycle.html">Crazy Motorcycle</a>
+<a class="card" href="games/cut-the-rope.html">Cut The Rope</a>
+<a class="card" href="games/duck-life-4.html">Duck Life 4</a>
+<a class="card" href="games/duck-life-5.html">Duck Life 5</a>
+<a class="card" href="games/eagle-ride.html">Eagle Ride</a>
+<a class="card" href="games/earn-to-die-2.html">Earn To Die 2</a>
+<a class="card" href="games/escaping-the-prison.html">Escaping The Prison</a>
+<a class="card" href="games/flood-runner-4.html">Flood Runner 4</a>
+<a class="card" href="games/fnaf-3.html">Fnaf 3</a>
+<a class="card" href="games/football-bros.html">Football Bros</a>
+<a class="card" href="games/geometry-vibes.html">Geometry Vibes</a>
+<a class="card" href="games/getaway-shootout.htm">Getaway Shootout</a>
+<a class="card" href="games/hover-racer-drive.html">Hover Racer Drive</a>
+<a class="card" href="games/jetpack-joyride.html">Jetpack Joyride</a>
+<a class="card" href="games/learn-to-fly-2.html">Learn To Fly 2</a>
+<a class="card" href="games/papas-bakeria.html">Papas Bakeria</a>
+<a class="card" href="games/papas-cheeseria.html">Papas Cheeseria</a>
+<a class="card" href="games/papas-donuteria.html">Papas Donuteria</a>
+<a class="card" href="games/papas-freezeria.html">Papas Freezeria</a>
+<a class="card" href="games/ragdoll-hit.html">Ragdoll Hit</a>
+<a class="card" href="games/red-ball-4-vol-2.html">Red Ball 4 Vol 2</a>
+<a class="card" href="games/riddle-transfer.html">Riddle Transfer</a>
+<a class="card" href="games/rooftop-snipers.htm">Rooftop Snipers</a>
+<a class="card" href="games/rooftop-snipers-2.html">Rooftop Snipers 2</a>
+<a class="card" href="games/run-3.html">Run 3</a>
+<a class="card" href="games/slow-roads.html">Slow Roads</a>
+<a class="card" href="games/sm-63.html">Sm 63</a>
+<a class="card" href="games/snowball-io.html">Snowball Io</a>
+<a class="card" href="games/space-waves.html">Space Waves</a>
+<a class="card" href="games/temple-run-2.htm">Temple Run 2</a>
+<a class="card" href="games/the-impossible-quiz.html">The Impossible Quiz</a>
+<a class="card" href="games/the-impossible-quiz-2.html">The Impossible Quiz 2</a>
+<a class="card" href="games/time-shooter-2.html">Time Shooter 2</a>
+<a class="card" href="games/time-shooter-3.htm">Time Shooter 3</a>
+<a class="card" href="games/wheely-2.html">Wheely 2</a>
+<a class="card" href="games/wheely-7.html">Wheely 7</a>
+</main>
+<footer>More games: <a href="https://gme-io.github.io/gn.ss/">Main site</a> &middot; <a href="https://gme-io.github.io/gn.sci/">GN.SCI Games</a></footer>
+<dialog id="log" aria-labelledby="logT"><div class="dh"><h2 id="logT">Changelog</h2><button id="logX" type="button" aria-label="Close">&times;</button></div><div class="db" id="logBody"></div></dialog>
+<script>
+// Add new entries at the TOP of this list (newest first). The popup opens by itself once when the newest entry changes.
+const CHANGELOG=[
+ {date:"2026-10-21",items:[
+  "Launched GN.SP Games with 45 more games that did not fit on the main site"
+ ]}
+];
+const q=document.getElementById("q"),n=document.getElementById("n"),cs=[...document.querySelectorAll(".card")];
+function f(){const v=q.value.trim().toLowerCase();let c=0;cs.forEach(e=>{const s=e.textContent.toLowerCase().includes(v);e.style.display=s?"":"none";if(s)c++});n.textContent=c+" games"}
+q.addEventListener("input",f);f();
+const dlg=document.getElementById("log"),dot=document.getElementById("dot"),KEY="gn.sp-changelog-seen";
+const fmt=d=>new Date(d+"T12:00:00").toLocaleDateString(undefined,{year:"numeric",month:"long",day:"numeric"});
+document.getElementById("logBody").innerHTML=CHANGELOG.map(e=>"<h3>"+fmt(e.date).toUpperCase()+"</h3><ul>"+e.items.map(i=>"<li>"+i.replace(/&/g,"&amp;").replace(/</g,"&lt;")+"</li>").join("")+"</ul>").join("");
+const newest=CHANGELOG[0].date+"#"+CHANGELOG[0].items.length;
+function seen(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+function markSeen(){try{localStorage.setItem(KEY,newest)}catch(e){}dot.hidden=true}
+function openLog(){if(!dlg.open)dlg.showModal();markSeen()}
+document.getElementById("logBtn").onclick=openLog;
+document.getElementById("logX").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+if(seen()!==newest){dot.hidden=false;openLog()}
+</script></body></html>
